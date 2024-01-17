@@ -21,7 +21,7 @@ const MovieCard = ({
     setShow(true);
   };
 
-  const { addItem, cartItems } = useContextData();
+  const { addItem } = useContextData();
 
   const addItemToCart = () => {
     addItem({
@@ -34,11 +34,11 @@ const MovieCard = ({
 
   return (
     <>
-      <div className="w-[20rem] bg-[#0A101C] text-white rounded-lg my-2 mx-auto hover:bg-[#1F2937] duration-200 border-[0.5px] border-slate-500">
+      <div className="w-[90%] lg:w-[20rem] bg-[#0A101C] text-white rounded-lg my-2 mx-auto hover:bg-[#1F2937] duration-200 border-[0.5px] border-slate-500">
         <img
           src={thumbnail}
           alt={thumbnail + 'poster'}
-          className="w-[20rem] h-[15rem] object-cover rounded-t-md"
+          className="w-full h-[25rem] lg:h-[15rem] object-cover rounded-t-md"
         />
 
         <div className="p-5">
@@ -60,9 +60,9 @@ const MovieCard = ({
           </div>
         </div>
 
-        <div className="p-5 flex items-center justify-evenly">
+        <div className="p-5 flex flex-col lg:flex-row items-center justify-evenly">
           <button
-            className={`bg-[#FFD62C] text-black w-[8rem] py-2 flex justify-center items-center rounded-md`}
+            className={`bg-[#FFD62C] text-black w-[90%] mb-2 lg:mb-0 lg:w-[8rem] py-2 flex justify-center items-center rounded-md`}
             onClick={() => {
               addItemToCart();
             }}
@@ -71,7 +71,7 @@ const MovieCard = ({
             Add
           </button>
           <button
-            className="border border-gray-700 w-[8rem] py-2 rounded-md"
+            className="border border-gray-700 w-[90%] lg:w-[8rem] py-2 rounded-md"
             onClick={openModal}
           >
             View details

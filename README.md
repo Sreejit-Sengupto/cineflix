@@ -2,9 +2,10 @@
 ![image](/public/readme_image.jpg)
 React app which displays list of movies in beautiful tile/card structure, items can be added/removed from the cart, with the total price and number of items, details about the movie can be read in a separate model.
 
-**The app uses TailwindCSS for styling.** 
+**The app uses TailwindCSS for styling.**
 
 ## How to setup locally?
+
 1. You will require `nodejs`.
 2. Clone the repository `git clone https://github.com/Sreejit-Sengupto/cineflix.git` to your desired location.
 3. Open the folder in your favorite code editor or terminal.
