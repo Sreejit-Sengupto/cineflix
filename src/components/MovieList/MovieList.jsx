@@ -18,7 +18,7 @@ const MovieList = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full p-10 flex flex-col lg:flex-row justify-between items-center flex-wrap">
+      <div className="w-full lg:p-10 flex lg:flex-row justify-between items-center flex-wrap">
         {/* Keep getting ten movies at a time from the array and display them */}
         {data.slice(0, offset + 10).map((item) => {
           return (

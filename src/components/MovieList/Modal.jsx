@@ -28,46 +28,49 @@ const Modal = ({
   return (
     <>
       <div className="fixed top-0 left-0 bottom-0 right-0 bg-[#ffffff3c] backdrop:blur-md"></div>
-      <div className="bg-[#1F2937] w-[95%] lg:w-[50%] h-[40rem] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded text-white border-[0.5px] border-gray-500 text-sm lg:text-base">
+      <div className="bg-[#1F2937] w-[95%] md:w-[80%] lg:w-[50%] h-[85%] lg:h-[60%] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded text-white border-[0.5px] border-gray-500 text-sm lg:text-base">
         <button className="block ml-auto mr-4 mt-4" onClick={closeModal}>
           <IoClose size={'1.5em'} />
         </button>
-        <div className="w-[40%] h-[80%] absolute left-2 lg:left-8 top-[50%] translate-y-[-50%]">
-          <img
-            src={image}
-            alt={image + 'poster'}
-            className="w-[80%] lg:h-[80%] object-cover"
-          />
-          <button
-            className="bg-[#FFD62C] text-black w-[80%] flex justify-center items-center mt-3 py-3 rounded font-medium"
-            onClick={addToCart}
-          >
-            <HiOutlineShoppingCart />
-            <span>Add to cart</span>
-          </button>
-        </div>
 
-        <div className="w-[60%] h-[80%] absolute right-2 lg:right-8 top-[50%] translate-y-[-50%]">
-          <p className="text-2xl font-bold mb-3">{title}</p>
-          <p className="text-base text-gray-400 mb-3">{year}</p>
-          <div className="flex items-center text-gray-400">
-            <p className="text-center">
-              {genre}
-              <span className="ml-2">•</span>
-            </p>
-            <p className="mx-3 flex justify-center items-center">
-              <TiStarFullOutline />
-              {rating}
-            </p>
-            <p className="flex justify-center items-center">
-              {' '}
-              <span className="mr-2 text-white">•</span> <FaRupeeSign />
-              {price}
-            </p>
+        <div className="w-full lg:w-[80%] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex justify-center items-start">
+          <div className="w-[50%] mr-[-6%]">
+            <img
+              src={image}
+              alt={image + 'poster'}
+              className="w-[80%] lg:h-[80%] object-cover"
+            />
+            <button
+              className="bg-[#FFD62C] text-black w-[80%] flex justify-center items-center mt-3 py-3 rounded font-medium"
+              onClick={addToCart}
+            >
+              <HiOutlineShoppingCart />
+              <span>Add to cart</span>
+            </button>
           </div>
 
-          <div className="w-full h-[1px] bg-gray-600 my-4"></div>
-          <p className="text-gray-400 overflow-y-auto">{description}</p>
+          <div className="w-[50%] flex flex-col justify-center items-start">
+            <p className="text-2xl font-bold mb-3">{title}</p>
+            <p className="text-base text-gray-400 mb-3">{year}</p>
+            <div className="flex items-center text-gray-400">
+              <p className="text-center">
+                {genre}
+                <span className="ml-2">•</span>
+              </p>
+              <p className="mx-3 flex justify-center items-center">
+                <TiStarFullOutline />
+                {rating}
+              </p>
+              <p className="flex justify-center items-center">
+                {' '}
+                <span className="mr-2 text-white">•</span> <FaRupeeSign />
+                {price}
+              </p>
+            </div>
+
+            <div className="w-full h-[1px] bg-gray-600 my-4"></div>
+            <p className="text-gray-400 overflow-y-auto">{description}</p>
+          </div>
         </div>
       </div>
     </>
