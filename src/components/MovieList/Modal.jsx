@@ -28,7 +28,7 @@ const Modal = ({
   return (
     <>
       <div className="fixed top-0 left-0 bottom-0 right-0 bg-[#ffffff3c] backdrop:blur-md"></div>
-      <div className="bg-[#1F2937] w-[95%] md:w-[80%] lg:w-[50%] h-[85%] lg:h-[60%] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded text-white border-[0.5px] border-gray-500 text-sm lg:text-base">
+      <div className="bg-[#1F2937] w-[95%] md:w-[80%] lg:w-[50%] h-[85%] lg:h-[40rem] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded text-white border-[0.5px] border-gray-500 text-sm lg:text-base overflow-y-auto">
         <button className="block ml-auto mr-4 mt-4" onClick={closeModal}>
           <IoClose size={'1.5em'} />
         </button>
